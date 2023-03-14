@@ -27,8 +27,6 @@ const showMassege = (text, style) => {
 //==================================
 
 const deleteTodo = (event) => {
-    var result = confirm("Want to delete?");
-    
     const selectTodo = event.target.parentElement.parentElement;
     todolists.removeChild(selectTodo);
     showMassege("Todo is deleted","bg-danger");
