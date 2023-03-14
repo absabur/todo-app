@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+.main{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+}
+.card{
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 217, 255);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    max-height: 700px;
+    height: 100%;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: auto;
+}
+.card-title{
+    padding: 15px;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.card-body{
+    width: 100%;
+    position: relative;
+}
+.todo-form{
+    text-align: center;
+}
+input, button{
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+}
+input{
+    width: 75%;
+}
+.btn{
+    width: 20%;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    background-color: rgb(255, 254, 254);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: tomato;
+    color: white;
+}
+.list-style{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: all 0.3s;
+    font-size: 1.4rem;
+}
+.list-style:hover{
+    background-color: #00ff4c;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    color: black;
+}
+.bg-succsess{
+    padding: 0.5rem;
+    color: black;
+    border-radius: 3px;
+    background-color: #ddffdd;
+    border-left: 6px solid green;
+}
+.bg-danger{
+    padding: 0.5rem;
+    color: black;
+    border-radius: 3px;
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+}
+.todo-width{
+    width: 92%;
+}
+#delete{
+    width: 5%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#massege{
+    width: max-content;
+    text-align: center;
+    margin: 5px auto;
+}
+
