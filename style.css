@@ -116,4 +116,10 @@ input{
         border-radius: 0;
         box-shadow: none;
     }
+    input{
+        width: 78%;
+    }
+    .btn{
+        width: 38%;
+    }
 }
