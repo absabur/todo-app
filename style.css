@@ -108,7 +108,6 @@ input{
     text-align: center;
     margin: 5px auto;
 }
-
 @media screen and (max-width: 500px){
     .card{
         height: 100%;
@@ -117,9 +116,9 @@ input{
         box-shadow: none;
     }
     input{
-        width: 78%;
+        width: 68%;
     }
     .btn{
-        width: 38%;
+        width: 28%;
     }
 }
