@@ -53,7 +53,15 @@ const creatTodo = (todoId, todoValue) => {
     `;
     todolists.appendChild(listCreat)
     const deleteButton = listCreat.querySelector("#delete");
-    deleteButton.addEventListener("click",deleteTodo)
+    deleteButton.addEventListener("click",function(todoId){
+        let deleteConfirm = confirm("Are you sure to delete?");
+        if (deleteConfirm){
+            deleteTodo(todoId);
+            alert("Todo is deleting...")
+        }else{
+            alert("Todo is not deleted.")
+        }
+    })
 }
 
 //==================================
