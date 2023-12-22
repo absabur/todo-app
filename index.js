@@ -27,13 +27,16 @@ const showMassege = (text, style) => {
 //==================================
 
 const deleteTodo = (event) => {
-    const selectTodo = event.target.parentElement.parentElement;
-    todolists.removeChild(selectTodo);
-    showMassege("Todo is deleted","bg-danger");
-    
-    let todos = getTodosLocalStorage();
-    todos = todos.filter((todo) => todo.todoId != selectTodo.id);
-    localStorage.setItem("mytodos", JSON.stringify(todos));
+    let confirm = confirm("Are you sure to delete this todo? ");
+    if (confirm) {
+        const selectTodo = event.target.parentElement.parentElement;
+        todolists.removeChild(selectTodo);
+        showMassege("Todo is deleted","bg-danger");
+        
+        let todos = getTodosLocalStorage();
+        todos = todos.filter((todo) => todo.todoId != selectTodo.id);
+        localStorage.setItem("mytodos", JSON.stringify(todos));
+    }
 
 }
 
@@ -57,10 +60,11 @@ const creatTodo = (todoId, todoValue) => {
         let deleteConfirm = confirm("Are you sure to delete?");
         if (deleteConfirm){
             deleteTodo(todoId);
-            alert("Todo is deleting...")
-        }else{
-            alert("Todo is not deleted.")
         }
+        //     alert("Todo is deleting...")
+        // }else{
+        //     alert("Todo is not deleted.")
+        // }
     })
 }
 
