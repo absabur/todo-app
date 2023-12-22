@@ -27,16 +27,13 @@ const showMassege = (text, style) => {
 //==================================
 
 const deleteTodo = (event) => {
-    let confirm = confirm("Are you sure to delete this todo? ");
-    if (confirm) {
-        const selectTodo = event.target.parentElement.parentElement;
-        todolists.removeChild(selectTodo);
-        showMassege("Todo is deleted","bg-danger");
-        
-        let todos = getTodosLocalStorage();
-        todos = todos.filter((todo) => todo.todoId != selectTodo.id);
-        localStorage.setItem("mytodos", JSON.stringify(todos));
-    }
+    const selectTodo = event.target.parentElement.parentElement;
+    todolists.removeChild(selectTodo);
+    showMassege("Todo is deleted","bg-danger");
+    
+    let todos = getTodosLocalStorage();
+    todos = todos.filter((todo) => todo.todoId != selectTodo.id);
+    localStorage.setItem("mytodos", JSON.stringify(todos));
 
 }
 
@@ -58,13 +55,10 @@ const creatTodo = (todoId, todoValue) => {
     const deleteButton = listCreat.querySelector("#delete");
     deleteButton.addEventListener("click",function(todoId){
         let deleteConfirm = confirm("Are you sure to delete?");
+        console.log(deleteConfirm);
         if (deleteConfirm){
             deleteTodo(todoId);
         }
-        //     alert("Todo is deleting...")
-        // }else{
-        //     alert("Todo is not deleted.")
-        // }
     })
 }
 
