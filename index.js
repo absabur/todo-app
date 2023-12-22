@@ -19,7 +19,7 @@ const showMassege = (text, style) => {
     setTimeout(()=>{
         warning.textContent = ""
     warning.classList.remove(style);
-    },1000)
+    },3000)
 }
 
 //==================================
@@ -55,7 +55,6 @@ const creatTodo = (todoId, todoValue) => {
     const deleteButton = listCreat.querySelector("#delete");
     deleteButton.addEventListener("click",function(todoId){
         let deleteConfirm = confirm("Are you sure to delete?");
-        console.log(deleteConfirm);
         if (deleteConfirm){
             deleteTodo(todoId);
         }
